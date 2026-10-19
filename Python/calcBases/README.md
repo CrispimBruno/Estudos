@@ -6,9 +6,9 @@
 
 ### `[ SISTEMA ]` 
 
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-1f6feb?style=for-the-badge)
-![Feito sem IA](https://img.shields.io/badge/FEITO%20SEM%20IA-100%25%20EU-0d1117?style=for-the-badge&logoColor=white)
+![Feito sem IA](https://img.shields.io/badge/FEITO%20SEM%20IA-0d1117?style=for-the-badge&logoColor=white)
 ![PUC Minas](https://img.shields.io/badge/PUC%20MINAS-ENG.%20SOFTWARE-0a0a23?style=for-the-badge)
 
 *Binário, octal, decimal e hexadecimal. Tudo passando pela base 10.*
