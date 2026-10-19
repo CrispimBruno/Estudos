@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="imagensDoReadme/banner.png" width="190" alt="Cris chibi estudando com fone azul"/>
+<img src="imagensDoReadme/banner.png" width="70%" alt="Cris chibi estudando com fone azul"/>
 
 # ⟦ CONVERSOR DE BASES ⟧
 
@@ -120,15 +120,6 @@ python calcBases.py
 - [ ] Tratamento de erros sem reiniciar o programa
 - [ ] Interface gráfica: virar uma calculadora de verdade 🖥️
 
----
-
-## 🎮 `[ FILOSOFIA ]`
-
-- Feito **do zero**, aprendendo cada passo.
-- Nomes de funções **diretamente ligados à base**, mas resumidos.
-- Primeiro funcionar no terminal, **depois ficar bonito**.
-
----
 
 <div align="center">
 
