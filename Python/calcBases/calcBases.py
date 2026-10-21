@@ -10,10 +10,9 @@
 
 def chamadorDeFunção(Base1, numero, parte):
         if Base1 == "1":
-            if verificadorBin(numero):
-                if parte == 1:
+            if parte == 1:
                     return binDec(numero)
-                elif parte == 2:
+            elif parte == 2:
                     return decBin(numero)
             else: 
                 print("O numero digitado está errado. Por favor tente novamente")
@@ -30,9 +29,9 @@ def chamadorDeFunção(Base1, numero, parte):
         elif Base1 == "3":
             if verificadorDec(numero):
                 if parte == 1:
-                    return decDec (numero)
+                    return decDec(numero)
                 elif parte == 2:
-                    return decDec
+                    return decDec(numero)
             else: 
                 print("O numero digitado está errado. Por favor tente novamente")
                 parte1()
@@ -115,7 +114,7 @@ def octDec(numero):
 def decDec(numero):
     #já passou pelo verificador kk, não existe passar da base 10 para 10
     #isso aqui é inutil, coloquei só para seguir a lógica. Basta ter o verificador
-    return numero
+    return int(numero)
 
 def hexDec(numero):
     decimal = 0
@@ -146,32 +145,32 @@ def hexDec(numero):
 #Aqui, a lógica de todos é parecido.É uma divisão subsequente e sua ordem inversa. Salvarei em String
 
 def decBin(numero):
-    inteiro = numero
+    inteiro = int(numero)
     numString = ""
     while inteiro >= 2:
         restoNum = inteiro%2
         numString += str(restoNum)
-        inteiro = int(numero)//2
+        inteiro = int(inteiro)//2
     if inteiro > 0:
-        numString += inteiro
-    return numString
+        numString += str(inteiro)
+    return numString[::-1]
 
 def decOct(numero):
-    inteiro = numero
+    inteiro = int(numero)
     numString = ""
     while inteiro >= 8:
         restoNum = inteiro%8
         numString += str(restoNum)
-        inteiro = int(numero)//8
+        inteiro = int(inteiro)//8
     if inteiro > 0:
-        numString += inteiro
-    return numString
+        numString += str(inteiro)
+    return numString[::-1]
 
 #decDec já tem ali em cima
 
 #esse aqui é delicado, eu preciso reconverter os numeros a cada loop
 def decHex(numero):
-    inteiro = numero
+    inteiro = int(numero)
     numString = ""
     while inteiro >= 16:
         restoNum = inteiro%16 #aqui entra o diferente desse numero
@@ -189,22 +188,22 @@ def decHex(numero):
             if restoNum == 15:
                 restoNum = "F"
         numString += str(restoNum)
-        inteiro = int(numero)//16
+        inteiro = int(inteiro)//16
     if inteiro > 0:
-        if restoNum == 10:
-            restoNum = "A"
-        if restoNum == 11:
-            restoNum = "B"
-        if restoNum == 12:
-            restoNum = "C"
-        if restoNum == 13:
-            restoNum = "D"
-        if restoNum == 14:
-            restoNum = "E"
-        if restoNum == 15:
-            restoNum = "F"
-        numString += inteiro
-    return numString
+        if inteiro == 10:
+            inteiro = "A"
+        if inteiro == 11:
+            inteiro = "B"
+        if inteiro == 12:
+            inteiro = "C"
+        if inteiro == 13:
+            inteiro = "D"
+        if inteiro == 14:
+            inteiro = "E"
+        if inteiro == 15:
+            inteiro = "F"
+        numString += str(inteiro)
+    return numString[::-1]
 
 
 
@@ -221,6 +220,7 @@ def escolherBase1():
         parte1()
     else:
         print("A base selecionada não está nas opcões")
+        escolherBase1()
 
 def escolherBase2():
     global Base2
@@ -236,6 +236,7 @@ def escolherBase2():
         parte2()
     else:
         print("A base selecionada não está nas opcões")
+        escolherBase1()
 
 #-----------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------
@@ -252,7 +253,7 @@ def parte1():
 def parte2():
     global segundoNumero, parte
     parte = 2
-    segundoNumero = chamadorDeFunção(Base2, primeiroNumero, parte)
+    segundoNumero = chamadorDeFunção(Base2, str(primeiroNumero), parte)
 
 
 
@@ -264,8 +265,8 @@ def parte2():
 escolherBase1()
 
 #apenas um teste por hora. Todos os numeros estão convertendo para decimal
-print(primeiroNumero)
+print(primeiroNumero, "(em decimal)")
 
 escolherBase2()
-print(segundoNumero)
-#seundoNumero = resposta
+print("Resposta: ", segundoNumero)
+# #segundoNumero = resposta
